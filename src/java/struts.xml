@@ -1,0 +1,37 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="welcome" class="action.StudentAction" >
+            <result name="SUCCESS">/welcomeUser.jsp</result>
+            <result name="ERROR">/login.jsp</result>
+        </action>
+        <action name="details" class="action.StudentAction" method="detailAdd" >
+            <result name="SUCCESS">/success.jsp</result>
+            <result name="ERROR">/unsuccess.jsp</result>
+        </action>
+        <action name="studentresult" class="action.ResultAction" >
+            <result name="SUCCESS">/result.jsp</result>
+            <result name="ERROR">/unsuccessres.jsp</result>
+        </action>
+        <action name="addmarks" class="action.ResultAction" method="addMark">
+            <result name="SUCCESS">/success.jsp</result>
+            <result name="ERROR">/unsuccess.jsp</result>
+        </action>
+        <action name="LoginPage" >
+            <result>/login.jsp</result>
+        </action>
+        <action name="AddDetailPage" >
+            <result>/addDetail.jsp</result>
+        </action>
+        <action name="MainPage" >
+            <result>/index.jsp</result>
+        </action>
+        <action name="AboutMePage" >
+            <result>/aboutMe.jsp</result>
+        </action>
+    </package>
+</struts>
